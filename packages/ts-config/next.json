@@ -1,0 +1,12 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "ESNext",
+    "target": "es5",
+    "resolveJsonModule": true,
+    "incremental": true
+  },
+  "exclude": ["node_modules"]
+}
