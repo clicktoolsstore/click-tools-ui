@@ -1,0 +1,11 @@
+{
+  "extends": "@click-tools-ui/ts-config/react",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*/~": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

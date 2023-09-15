@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@click-tools-ui/eslint-config/react",
+    "plugin:storybook/recommended"
+  ]
+}

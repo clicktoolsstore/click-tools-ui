@@ -18,6 +18,7 @@
     "@click-tools-ui/ts-config": "*",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^5.2.2"
   }
 }
