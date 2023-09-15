@@ -1,0 +1,6 @@
+{
+  "extends": ["@click-tools-ui/eslint-config/node"],
+  "rules": {
+    "no-console": "warn"
+  }
+}

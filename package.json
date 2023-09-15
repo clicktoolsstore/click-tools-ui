@@ -4,18 +4,20 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
-    "tsconfig": "*",
-    "turbo": "latest"
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
   },
   "name": "click-tools-ui",
   "packageManager": "npm@9.7.1",
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "@click-tools-ui/eslint-config": "*",
+    "@click-tools-ui/ts-config": "*",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "turbo": "latest"
+  }
 }

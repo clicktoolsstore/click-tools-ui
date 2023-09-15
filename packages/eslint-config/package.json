@@ -1,0 +1,11 @@
+{
+  "name": "@click-tools-ui/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3"
+  }
+}

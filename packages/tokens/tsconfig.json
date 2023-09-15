@@ -1,0 +1,1 @@
+{ "extends": "@click-tools-ui/ts-config/base", "include": ["src"] }
