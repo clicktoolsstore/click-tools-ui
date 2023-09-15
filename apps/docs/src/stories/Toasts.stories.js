@@ -3,7 +3,7 @@ import { within, userEvent } from '@storybook/testing-library'
 import { Page as EmptyList } from './Page'
 
 export default {
-  title: 'Feedbacks/EmptyList',
+  title: 'Feedbacks/Toasts',
   component: EmptyList,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
