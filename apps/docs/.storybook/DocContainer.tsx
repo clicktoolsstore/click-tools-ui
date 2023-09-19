@@ -7,6 +7,7 @@ export const DocsContainer = (
   props: PropsWithChildren<BaseContainerProps>
 ) => {
   const dark = useDarkMode();
+  console.log('dd')
   return (
     <BaseContainer
       context={props.context}

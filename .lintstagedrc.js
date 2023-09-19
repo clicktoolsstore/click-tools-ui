@@ -17,5 +17,5 @@ module.exports = {
     const filesToLint = await removeIgnoredFiles(files)
     return [`eslint --max-warnings=0 ${filesToLint}`]
   },
-  "*.{json,html,css}": "prettier --write"
+  "**/*.{json,html,css}": "prettier --write"
 }
