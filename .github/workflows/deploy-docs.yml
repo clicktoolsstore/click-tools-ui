@@ -22,12 +22,12 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-        # env:
-        #   TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        #   TURBO_TEAM: ${{ vars.VERCEL_TEAM }}
+        env:
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TEAM: ${{ vars.VERCEL_TEAM }}
 
-      # - name: Debug Git Enviroment
-      #   run: git config --list
+      - name: Debug Git Enviroment
+        run: git config --list
 
       - name: Deploy storybook
         working-directory: ./packages/docs
