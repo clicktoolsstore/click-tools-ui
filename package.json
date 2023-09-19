@@ -4,7 +4,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint:staged": "lint-staged",
     "prepare": "husky install"
   },
   "name": "click-tools-ui",
@@ -19,6 +19,11 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "turbo": "latest",
-    "typescript": "^5.2.2"
+    "typescript": "4.7.4",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
   }
 }

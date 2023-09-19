@@ -17,6 +17,7 @@
   "devDependencies": {
     "@click-tools-ui/eslint-config": "*",
     "@click-tools-ui/tokens": "*",
+    "@click-tools-ui/react": "*",
     "@storybook/addon-backgrounds": "^7.4.2",
     "@storybook/addon-essentials": "^7.4.2",
     "@storybook/addon-interactions": "^7.4.2",

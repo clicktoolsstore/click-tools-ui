@@ -13,7 +13,9 @@ const preview: Preview = {
       darkMode: {
         current: 'dark',
         dark: {...themes.dark},
-        light: {...themes.light}
+        light: {...themes.light},
+        darkClass: 'dark',
+        stylePreview: true
       }     
     },
     docs: {
