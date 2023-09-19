@@ -13,7 +13,6 @@
   "name": "click-tools-ui",
   "packageManager": "npm@9.7.1",
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
   "dependencies": {
