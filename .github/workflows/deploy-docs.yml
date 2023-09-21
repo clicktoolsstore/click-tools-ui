@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -23,8 +23,8 @@ jobs:
 
       - run: npm run build
         env:
-          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          TURBO_TEAM: ${{ vars.VERCEL_TEAM }}
+          TURBO_TOKEN: ${{ secrets.CTS_UI_TURBO_CACHE }}
+          TURBO_TEAM: ${{ vars.CTS_UI_TURBO_TEAM }}
 
       - name: Debug Git Enviroment
         run: git config --list
