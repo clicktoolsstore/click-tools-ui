@@ -1,81 +1,83 @@
-# Turborepo starter
+# Click Tools UI Design System
 
-This is an official starter Turborepo.
+Welcome to the Click Tools UI Design System repository. This design system is a collection of reusable components and UI tokens that provide a consistent and cohesive user interface for Click Tools applications. Whether you're building a new Click Tools project or enhancing an existing one, this design system is here to help you maintain a unified look and feel.
 
-## Using this example
+## Features
 
-Run the following command:
+The Click Tools UI Design System includes the following key features:
 
-```sh
-npx create-turbo@latest
+1. **UI Tokens**: A set of foundational design tokens that serve as the building blocks for creating a consistent and visually appealing user interface.
+
+2. **Web Components**: A library of React components meticulously crafted and styled with StitchesJS, making it easy to build responsive and aesthetically pleasing user interfaces.
+
+3. **Stitches Provider Themed**: A Stitches provider with theming support, allowing you to customize the design system to match your project's unique branding and visual identity.
+
+## Documentation
+
+For detailed information and usage guidelines, please refer to our comprehensive documentation:
+
+[**Click Tools UI Documentation**](https://clicktoolsstore.github.io/click-tools-ui/?path=/docs/home--docs)
+
+## Getting Started
+
+### Development
+
+To start developing your apps and packages using the Click Tools UI Design System, follow these steps:
+
+1. **Clone the Repository**: Clone this repository to your local machine using Git.
+
+   ```bash
+   git clone https://github.com/clicktoolsstore/click-tools-ui.git
+   ```
+
+2. Install Dependencies: Navigate to the cloned repository's directory and install the required dependencies.
+
+```bash
+cd click-tools-ui
+npm install
 ```
 
-## What's inside?
+1. Start Development: Start the development packages on dev mode. You can do this by running the following command in the root directory.
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```bash
+npm run dev
 ```
 
-### Develop
+### Building
 
-To develop all apps and packages, run the following command:
+To create a local build you can run the command on the root directory:
 
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```bash
+npm run build
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Pre-publishing
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+The packages `@click-tools-ui/react` and `@click-tools-ui/tokens` are published on npm. To publish new versions of them, follow these steps:
 
+1. Make the desired changes to the package(s).
+
+2. Before committing, run the following commands from the root directory:
+
+```bash
+npm run changeset
 ```
-npx turbo link
+
+This command will initiate a series of questions:
+
+- Select packages to bump version.
+- Select if any package needs a major bump.
+- Select if any package needs a minor bump.
+- Select if any package needs a patch bump.
+- Type a summary to describe the changes.
+- Confirm the change.
+
+3. After successfully completing the steps above, a new file with the changelog preview will be generated in the `.changeset/<some-random-name>.md` file. You can review and refine the summary and improve it by specifying scopes/packages as needed.
+
+4. After reviewing the changelog preview, update the package(s) `CHANGELOG.md` and bump the version with the following command:
+
+```bash
+npm run version-packages
 ```
 
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+5. After this step you can continue with your commit.
