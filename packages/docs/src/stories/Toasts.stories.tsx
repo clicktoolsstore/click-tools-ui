@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Toast, ToastProps } from './Toast'
 import { Button } from '@click-tools-ui/react'
 
-export default {
+const meta: Meta<ToastProps> = {
   title: 'Feedbacks/Toasts',
   component: Toast,
   tags: ['autodocs'],
@@ -24,6 +24,6 @@ export default {
       )
     },
   ],
-} as Meta<ToastProps>
-
+}
+export default meta
 export const Primary: StoryObj = {}
