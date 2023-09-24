@@ -7,7 +7,7 @@
     "lint:staged": "lint-staged",
     "prepare": "husky install",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "version-packages": "changeset version && npm i",
     "release": "turbo run build --filter=!docs && changeset publish"
   },
   "name": "click-tools-ui",
