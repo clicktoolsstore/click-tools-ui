@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonProps } from '@click-tools-ui/react'
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-export default {
+const meta: Meta<ButtonProps> = {
   title: 'Buttons/Button',
   component: Button,
   tags: ['autodocs'],
@@ -25,22 +24,22 @@ export default {
       },
     },
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
+}
 
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-} as Meta<ButtonProps>
+export default meta
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: StoryObj<ButtonProps> = {}
+type Story = StoryObj<ButtonProps>
 
-export const Secondary: StoryObj<ButtonProps> = {
+export const Primary: Story = {}
+
+export const Secondary: Story = {
   args: {
     variant: 'secondary',
     children: 'Secondary',
   },
 }
 
-export const Mono: StoryObj<ButtonProps> = {
+export const Mono: Story = {
   args: {
     variant: 'mono',
     children: 'Mono',
@@ -48,7 +47,7 @@ export const Mono: StoryObj<ButtonProps> = {
   },
 }
 
-export const CTA: StoryObj<ButtonProps> = {
+export const CTA: Story = {
   args: {
     variant: 'cta',
     children: 'Call to action',

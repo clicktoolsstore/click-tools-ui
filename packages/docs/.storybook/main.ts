@@ -1,6 +1,6 @@
 import { join, dirname } from "path";
 import { StorybookConfig } from "@storybook/react-vite";
-
+import remarkGfm from 'remark-gfm';
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -20,11 +20,21 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-backgrounds"),
-    getAbsolutePath("storybook-dark-mode"),    
+    getAbsolutePath("storybook-dark-mode"), 
+    {
+      name: getAbsolutePath('@storybook/addon-docs'),
+      options: {
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
+        },
+      },
+    },
   ],
   staticDirs: ["../public"],
   framework: {
-    name: "@storybook/react-vite",
+    name: getAbsolutePath("@storybook/react-vite") as "@storybook/react-vite",
     options: {},
   },
   docs: {
