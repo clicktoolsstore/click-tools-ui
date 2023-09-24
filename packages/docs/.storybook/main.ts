@@ -1,5 +1,6 @@
 import { join, dirname } from "path";
 import { StorybookConfig } from "@storybook/react-vite";
+
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -21,9 +22,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-backgrounds"),
     getAbsolutePath("storybook-dark-mode"),    
   ],
-  staticDirs: [
-    '../public',
-  ],
+  staticDirs: ["../public"],
   framework: {
     name: "@storybook/react-vite",
     options: {},
@@ -31,12 +30,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  viteFinal: (config, {configType})=> {
-    if(configType === 'PRODUCTION') {
-      config.base = '/click-tools-ui/'
+  viteFinal: (config, { configType }) => {
+    if (configType === "PRODUCTION") {
+      config.base = "/click-tools-ui/";
     }
-    return config
-  }
+    return config;
+  },
 };
 export default config;
-

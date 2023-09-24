@@ -18,7 +18,6 @@ export default {
     variant: {
       control: 'inline-radio',
       options: ['primary', 'secondary', 'mono', 'cta'],
-
       table: {
         defaultValue: {
           summary: 'primary',

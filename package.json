@@ -16,8 +16,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@changesets/cli": "^2.26.2",
-    "@stitches/react": "^1.2.8"
+    "@changesets/cli": "^2.26.2"
   },
   "devDependencies": {
     "@click-tools-ui/eslint-config": "*",
@@ -26,6 +25,7 @@
     "@commitlint/config-conventional": "^17.7.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
+    "tailwindcss": "^3.3.3",
     "turbo": "latest",
     "typescript": "4.7.4"
   }

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 
 import { Toast, ToastProps } from './Toast'
-import { Button, HStack } from '@click-tools-ui/react'
+import { Button } from '@click-tools-ui/react'
 
 export default {
   title: 'Feedbacks/Toasts',
@@ -10,20 +10,16 @@ export default {
   decorators: [
     (Story) => {
       return (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
+        <div>
           <Story />
-          <HStack>
-            <Button variant={'primary'}>Text2</Button>
-          </HStack>
-
-          <HStack>
-            <Button variant="secondary">Text</Button>
-          </HStack>
+          <div className="gap-4 flex flex-col bg-neutral-300">
+            <Button variant="primary" className="bg-primary-500">
+              Primary
+            </Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="mono">Mono</Button>
+            <Button variant="cta">Click to Action</Button>
+          </div>
         </div>
       )
     },

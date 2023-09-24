@@ -1,23 +1,38 @@
-import { ComponentProps, forwardRef } from 'react'
+import { ButtonHTMLAttributes, forwardRef } from 'react'
+import { VariantProps } from 'tailwind-variants'
 
-import { Styles } from './styles'
+import { button } from './styles'
 
-export type ButtonProps = ComponentProps<typeof Styles.Button> & {
-  isLoading?: boolean
-}
+type ButtonVariants = VariantProps<typeof button>
+
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
+  ButtonVariants & {
+    isLoading?: boolean
+  }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ isLoading, disabled, type = 'button', children, ...props }, ref) => {
+  (
+    {
+      type = 'button',
+      variant = 'secondary',
+      className,
+      isLoading,
+      disabled,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
     return (
-      <Styles.Button
+      <button
         type={type}
         disabled={disabled || isLoading}
-        data-isLoading={isLoading}
         {...props}
+        className={button({ variant, className })}
         ref={ref}
       >
         {children}
-      </Styles.Button>
+      </button>
     )
   },
 )
