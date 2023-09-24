@@ -1,6 +1,6 @@
 {
   "name": "@click-tools-ui/react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -9,16 +9,28 @@
     "build": "tsup src/index.tsx --format esm, cjs --dts --external react",
     "lint": "eslint src/**/*.ts* --fix"
   },
-  "dependencies": {
-    "@stitches/react": "^1.2.8"
-  },
   "devDependencies": {
     "@click-tools-ui/eslint-config": "*",
     "@click-tools-ui/tokens": "*",
     "@click-tools-ui/ts-config": "*",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.30",
     "react": "^18.2.0",
     "tsup": "^7.2.0"
+  },
+  "dependencies": {
+    "tailwind-variants": "^0.1.14"
+  },
+  "exports": {
+    ".": "./dist",
+    "./styles.css": "./dist/index.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^3.3.3"
   }
 }

@@ -1,12 +1,25 @@
-import { colors, space } from '@click-tools-ui/tokens'
+import { colors } from '@click-tools-ui/tokens'
 
-const spaces = Object.entries(space)
-  .map(([key, value]) => ({
-    value,
-    key,
-    valuePixel: Number(key) * 4 + 'px',
-  }))
-  .sort((a, b) => Number(a.key) - Number(b.key))
+import defaultTheme from 'tailwindcss/defaultTheme'
+const spacing = defaultTheme.spacing
+
+const spaces = Object.entries(spacing)
+  .map(([key, value]) => {
+    if (isNaN(Number(key))) {
+      return {
+        key,
+        value: 1 / 16 + 'rem',
+        valuePixel: value as string,
+      }
+    }
+
+    return {
+      key,
+      value: value.replace('px', 'rem'),
+      valuePixel: Number(key) * 4 + 'px',
+    }
+  })
+  .sort((a, b) => parseInt(a.valuePixel) - parseInt(b.valuePixel))
 
 export const SpaceTable = () => {
   return (
