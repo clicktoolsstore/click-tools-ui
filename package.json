@@ -8,7 +8,8 @@
     "prepare": "husky install",
     "changeset": "changeset",
     "version-packages": "changeset version && npm i",
-    "release": "turbo run build --filter=!docs && changeset publish"
+    "release": "turbo run build --filter=!docs && changeset publish",
+    "test": "cd packages/react && npm run test"
   },
   "name": "click-tools-ui",
   "packageManager": "npm@9.7.1",
@@ -23,11 +24,12 @@
     "@click-tools-ui/ts-config": "*",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "tailwindcss": "^3.3.3",
     "turbo": "latest",
-    "typescript": "4.7.4",
-    "eslint-plugin-prettier": "^5.0.0-alpha.2"
+    "typescript": "4.7.4"
   }
 }
