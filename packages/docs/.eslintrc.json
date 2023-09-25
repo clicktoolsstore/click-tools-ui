@@ -1,9 +1,4 @@
 {
-  "extends": [
-    "@click-tools-ui/eslint-config/react",
-    "plugin:storybook/recommended"
-  ],
-  "rules": {
-    "no-console": "warn"
-  }
+  "root": true,
+  "extends": ["@rocketseat/eslint-config/react", "plugin:storybook/recommended"]
 }
