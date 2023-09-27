@@ -33,13 +33,6 @@
   "dependencies": {
     "tailwind-variants": "^0.1.14"
   },
-  "exports": {
-    ".": "./dist",
-    "./styles.css": "./dist/index.css"
-  },
-  "sideEffects": [
-    "**/*.css"
-  ],
   "peerDependencies": {
     "tailwindcss": "^3.3.3"
   }
