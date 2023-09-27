@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 0.2.2
+
+### Patch Changes
+
+- testing types publisehd
+
 ## 0.2.1
 
 ### Patch Changes
