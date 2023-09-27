@@ -3,7 +3,7 @@ import { themes } from "@storybook/theming";
 import { DocsContainer } from "./DocContainer";
 
 import '../src/index.css'
-import "@click-tools-ui/react/styles.css"
+import "@click-tools-ui/react/dist/index.css"
 
 const preview: Preview = {
   parameters: {
