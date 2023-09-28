@@ -1,5 +1,11 @@
 # @click-tools-ui/tokens
 
+## 0.1.2
+
+### Patch Changes
+
+- adding new transparent token
+
 ## 0.1.1
 
 ### Patch Changes

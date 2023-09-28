@@ -1,6 +1,8 @@
 import { join, dirname } from "path";
 import { StorybookConfig } from "@storybook/react-vite";
-import remarkGfm from 'remark-gfm';
+import remarkGfm from "remark-gfm";
+import svgrPlugin from "vite-plugin-svgr";
+
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -20,9 +22,9 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),
     getAbsolutePath("@storybook/addon-interactions"),
     getAbsolutePath("@storybook/addon-backgrounds"),
-    getAbsolutePath("storybook-dark-mode"), 
+    getAbsolutePath("storybook-dark-mode"),
     {
-      name: getAbsolutePath('@storybook/addon-docs'),
+      name: getAbsolutePath("@storybook/addon-docs"),
       options: {
         mdxPluginOptions: {
           mdxCompileOptions: {
@@ -41,6 +43,10 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   viteFinal: (config, { configType }) => {
+    config.plugins = [
+      ...(config.plugins || []),
+      svgrPlugin({ svgrOptions: { icon: true } }),
+    ];
     if (configType === "PRODUCTION") {
       config.base = "/click-tools-ui/";
     }

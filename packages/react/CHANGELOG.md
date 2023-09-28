@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 0.2.3
+
+### Patch Changes
+
+- adding input base element
+
 ## 0.2.2
 
 ### Patch Changes
