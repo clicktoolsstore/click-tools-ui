@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonProps } from '@click-tools-ui/react'
 
 const meta: Meta<ButtonProps> = {
-  title: 'Buttons/Button',
+  title: 'Components/Buttons/Button',
   component: Button,
   tags: ['autodocs'],
   args: {
