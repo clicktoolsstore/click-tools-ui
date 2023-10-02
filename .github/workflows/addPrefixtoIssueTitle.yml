@@ -12,8 +12,18 @@ jobs:
       uses: actions/checkout@v2
     - name: Update issue title
       run: |
+        ORIGINAL_TITLE="${{ github.event.issue.title }}"
+        ORIGINAL_BODY="${{ github.event.issue.body }}"
+        FORMATTED_TITLE=$(echo "$ORIGINAL_TITLE" | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}')
+        FIGMA_LINK="https://www.figma.com/file/eQSa4hzdxg4RbEm2prL2CZ/Click-Tools-v01?type=design&node-id=1621-19&mode=design&t=W3dcwtrS6lbfu95l-0"
+        UPDATED_BODY="$ORIGINAL_BODY\n\nSegue o link do [Figma]($FIGMA_LINK)"
+        
+        echo "Original Title: $ORIGINAL_TITLE"
+        echo "Formatted Title: $FORMATTED_TITLE"
+        
+        # Faz a chamada para atualizar o título e o corpo
         curl -X PATCH \
-        -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+        -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
         -H "Accept: application/vnd.github.v3+json" \
         https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }} \
-        -d '{"title":"CTUI-${{ github.event.issue.number }}: ${{ github.event.issue.title }}"}'
+        -d "{\"title\":\"CTUI-${{ github.event.issue.number }}: $FORMATTED_TITLE\", \"body\":\"$UPDATED_BODY\"}"
