@@ -1,5 +1,11 @@
 # @click-tools-ui/tokens
 
+## 0.1.3
+
+### Patch Changes
+
+- dependency update
+
 ## 0.1.2
 
 ### Patch Changes

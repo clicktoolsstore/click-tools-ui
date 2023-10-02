@@ -1,12 +1,12 @@
 import { tv, VariantProps } from 'tailwind-variants'
 
 export const headingTypo = tv({
-  base: 'font-sans font-normal text-primary-900',
+  base: 'ct-font-sans ct-font-normal ct-text-primary-900',
   variants: {
     size: {
-      sm: 'text-2xl',
-      md: 'text-[1.75rem] leading-9',
-      lg: 'text-[2rem] leading-10',
+      sm: 'ct-text-2xl',
+      md: 'ct-text-[1.75rem] ct-leading-9',
+      lg: 'ct-text-[2rem] ct-leading-10',
     },
   },
   defaultVariants: {
@@ -17,12 +17,12 @@ export const headingTypo = tv({
 export type HeadingProps = VariantProps<typeof headingTypo>
 
 export const labelTypo = tv({
-  base: 'font-sans font-medium text-primary-900',
+  base: 'ct-font-sans ct-font-medium ct-text-primary-900',
   variants: {
     size: {
-      sm: 'text-[0.70rem] leading-4 tracking-[0.031rem]',
-      md: 'text-[0.75rem] leading-4 tracking-[0.031rem]',
-      lg: 'text-sm tracking-[0.065rem]',
+      sm: 'ct-text-[0.70rem] ct-leading-4 ct-tracking-[0.031rem]',
+      md: 'ct-text-[0.75rem] ct-leading-4 ct-tracking-[0.031rem]',
+      lg: 'ct-text-sm ct-tracking-[0.065rem]',
     },
   },
   defaultVariants: {
@@ -33,12 +33,12 @@ export const labelTypo = tv({
 export type LabelProps = VariantProps<typeof labelTypo>
 
 export const bodyTypo = tv({
-  base: 'font-sans font-normal  text-primary-900',
+  base: 'ct-font-sans ct-font-normal ct-text-primary-900',
   variants: {
     size: {
-      sm: 'text-[0.75rem] leading-4 tracking-[0.031rem]',
-      md: 'text-sm tracking-[0.016rem]',
-      lg: 'text-base',
+      sm: 'ct-text-[0.75rem] ct-leading-4 ct-tracking-[0.031rem]',
+      md: 'ct-text-sm ct-tracking-[0.016rem]',
+      lg: 'ct-text-base',
     },
   },
   defaultVariants: {

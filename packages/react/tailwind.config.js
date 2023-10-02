@@ -2,7 +2,7 @@ import { colors } from '@click-tools-ui/tokens'
 import defaultFontTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -12,4 +12,7 @@ module.exports = {
       },
     },
   },
+  prefix: 'ct-',
 }
+
+export default config

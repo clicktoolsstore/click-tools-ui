@@ -15,6 +15,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       type = 'button',
       variant = 'primary',
+      size = 'lg',
+      rounded = 'full',
       className,
       isLoading,
       disabled,
@@ -29,7 +31,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || isLoading}
         {...props}
         data-loading={isLoading}
-        className={button({ variant, className })}
+        className={button({ variant, size, rounded, className })}
         ref={ref}
       >
         {children}
