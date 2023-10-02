@@ -1,5 +1,13 @@
 # @click-tools-ui/react
 
+## 0.3.0
+
+### Minor Changes
+
+- - Adding typografy base tv classes
+  - Adjusting default btn variant and its layout
+  - Adjust layout input
+
 ## 0.2.3
 
 ### Patch Changes

@@ -12,7 +12,7 @@ const config: Config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   coverageReporters: ['json-summary', 'text', 'lcov'],
   collectCoverageFrom: [
-    '**/*.{ts,tsx}',
+    '**/src/**/*.{ts,tsx}',
     '!**/src/index.tsx',
     '!**/jest.setup.ts',
     '!**/jest.config.ts',

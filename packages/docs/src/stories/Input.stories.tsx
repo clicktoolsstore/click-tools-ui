@@ -4,12 +4,11 @@ import { InputProps, Input } from '@click-tools-ui/react'
 const meta: Meta<InputProps> = {
   title: 'Components/Inputs/Input',
   component: Input,
-  tags: ['autodocs'],
   args: {
     disabled: false,
     placeholder: 'Moto',
     readOnly: false,
-    error: 'Some Error',
+    error: '',
     value: 'Input Value',
   },
   argTypes: {},

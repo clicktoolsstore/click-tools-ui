@@ -1,0 +1,80 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title={"Libs/Utils/cn"} />
+
+# cn - utility function
+
+The <code>cn</code> function is a utility that simplifies the construction of CSS
+class names by leveraging the <code>clsx</code> and <code>twMerge</code> libraries.
+It provides an easy way to build class name strings efficiently.
+
+## Usage
+
+```js
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+```
+
+it combines the power of conditional string contructions with clsx:
+
+### Strings (variadic)
+
+```js
+cn("foo", true && "bar", "baz");
+//=> 'foo bar baz'
+```
+
+### Objects
+
+```js
+cn({ foo: true, bar: false, baz: isTrue() });
+//=> 'foo baz'
+```
+
+### Objects (variadic)
+
+```js
+cn({ foo: true }, { bar: false }, null, { "--foobar": "hello" });
+//=> 'foo --foobar'
+```
+
+### Arrays
+
+```js
+cn(["foo", 0, false, "bar"]);
+//=> 'foo bar'
+```
+
+### Arrays (variadic)
+
+```js
+cn(["foo"], ["", 0, false, "bar"], [["baz", [["hello"], "there"]]]);
+//=> 'foo bar baz hello there'
+```
+
+### Kitchen sink (with nesting)
+
+```js
+cn("foo", [1 && "bar", { baz: false, bat: null }, ["hello", ["world"]]], "cya");
+//=> 'foo bar hello world cya'
+```
+
+## Merging Tailwind CSS Classes
+
+The <code>cn</code> utility function uses the <code>twMerge</code> utility function
+to efficiently merge Tailwind CSS classes in JavaScript without style conflicts.
+
+### Example
+
+```js
+twMerge("px-2 py-1 bg-red hover:bg-dark-red", "p-3 bg-[#B91C1C]");
+// → 'hover:bg-dark-red p-3 bg-[#B91C1C]'
+```
+
+This combination of <code>clsx</code> and <code>twMerge</code> empowers you to create
+and manage CSS class names effortlessly, making it a valuable tool for styling your
+components in a clean and efficient manner.
