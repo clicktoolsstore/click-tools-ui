@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title={"Typography/Usage"} />
+
+# Typography Styles Usage
+
+To provide flexibility in styling elements, we export style classes such as
+
+```jsx
+headingTypo | labelType | bodyTypo ...
+```
+
+These classes can be utilized in your <code>html/components</code> to achieve consistent typography styles.
+
+## Basic Usage
+
+For basic usage, apply the typography styles directly to your elements:
+
+```jsx
+import { headingTypo } from "@click-tools-ui/react";
+...
+  // Apply typography styles using headingTypo class in any html element
+  <h1 className={headingTypo({ size })} {...rest}>
+    Sample
+  </h1>;
+```
+
+## Advanced Usage with Wrappers
+
+If you need to apply additional custom classes or wrap the element:
+
+```jsx
+import { FC, HTMLAttributes } from 'react'
+import { headingTypo, HeadingProps } from "@click-tools-ui/react";
+
+type Props = HTMLAttributes<HTMLHeadingElement> & HeadingProps
+
+export const Wrapper: FC<Props> = ({
+  size,
+  className,
+  children,
+  ...rest
+}) => {
+  return (
+    // headingTypo({ size, ['custom classes' , className] })
+    <h2 className={headingTypo({ size, className })} {...rest}>
+      {children}
+    </h2>
+  )
+}
+```

@@ -9,6 +9,7 @@ const meta: Meta<ButtonProps> = {
     variant: 'primary',
     children: 'Button Label',
     disabled: false,
+    isLoading: false,
   },
   argTypes: {
     children: {
@@ -43,7 +44,6 @@ export const Mono: Story = {
   args: {
     variant: 'mono',
     children: 'Mono',
-    isLoading: true,
   },
 }
 
@@ -51,6 +51,5 @@ export const CTA: Story = {
   args: {
     variant: 'cta',
     children: 'Call to action',
-    disabled: true,
   },
 }
