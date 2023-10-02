@@ -1,7 +1,7 @@
 import { colors } from '@click-tools-ui/tokens'
 
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
     'node_modules/@click-tools-ui/react/dist/index.css',
@@ -11,5 +11,8 @@ export default {
       colors,
     },
   },
+
   plugins: [],
 }
+
+export default config

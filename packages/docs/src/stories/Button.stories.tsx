@@ -3,13 +3,13 @@ import { Button, ButtonProps } from '@click-tools-ui/react'
 
 const meta: Meta<ButtonProps> = {
   title: 'Components/Buttons/Button',
-  component: Button,
   tags: ['autodocs'],
   args: {
     variant: 'primary',
     children: 'Button Label',
     disabled: false,
     isLoading: false,
+    size: 'md',
   },
   argTypes: {
     children: {
@@ -17,13 +17,30 @@ const meta: Meta<ButtonProps> = {
     },
     variant: {
       control: 'inline-radio',
-      options: ['primary', 'secondary', 'mono', 'cta'],
+      options: ['primary', 'secondary', 'mono', 'cta', 'destructive'],
       table: {
         defaultValue: {
           summary: 'primary',
         },
       },
     },
+    size: {
+      control: 'inline-radio',
+      options: ['sm', 'md', 'lg'],
+      table: {
+        defaultValue: {
+          summary: 'lg',
+        },
+      },
+    },
+  },
+
+  render: (args) => {
+    return (
+      <div className="p-5 bg-slate-100">
+        <Button {...args} />
+      </div>
+    )
   },
 }
 
@@ -51,5 +68,12 @@ export const CTA: Story = {
   args: {
     variant: 'cta',
     children: 'Call to action',
+  },
+}
+
+export const Destructive: Story = {
+  args: {
+    variant: 'destructive',
+    children: 'Destructive',
   },
 }
