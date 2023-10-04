@@ -26,7 +26,7 @@ const meta: Meta<ButtonProps> = {
     },
     size: {
       control: 'inline-radio',
-      options: ['sm', 'md', 'lg'],
+      options: ['xs', 'sm', 'md', 'lg'],
       table: {
         defaultValue: {
           summary: 'lg',

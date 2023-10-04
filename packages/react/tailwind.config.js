@@ -9,10 +9,10 @@ const config = {
       colors,
       fontFamily: {
         sans: ['"Roboto"', ...defaultFontTheme.fontFamily.sans],
+        montserrat: ['"Montserrat"', ...defaultFontTheme.fontFamily.sans],
       },
     },
   },
-  prefix: 'ct-',
 }
 
 export default config

@@ -1,4 +1,8 @@
 {
   "root": true,
-  "extends": ["@rocketseat/eslint-config/react", "plugin:storybook/recommended"]
+  "extends": [
+    "@rocketseat/eslint-config/react",
+    "plugin:storybook/recommended"
+  ],
+  "ignorePatterns": ["!.storybook"]
 }

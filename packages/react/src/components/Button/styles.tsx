@@ -2,45 +2,46 @@ import { tv } from 'tailwind-variants'
 
 export const button = tv({
   base: [
-    'ct-font-sans ct-font-semibold',
-    'ct-border ct-shadow-md ct-transition-colors',
-    'ct-transition-shadow focus-visible:ct-outline-none focus-visible:ct-ring-1',
-    'disabled:ct-opacity-75',
-    'enabled:ct-cursor-pointer disabled:ct-cursor-not-allowed disabled:data-[loading=true]:ct-cursor-progress',
-    'focus-visible:ct-border-primary-900 focus-visible:ct-ring-1 focus-visible:ct-ring-primary-900',
-    'active:ct-ring-primary-900 enabled:active:ct-ring-2 ',
+    'font-sans font-semibold',
+    'border shadow-md transition-colors',
+    'transition-shadow focus-visible:outline-none focus-visible:ring-1',
+    'disabled:opacity-75',
+    'enabled:cursor-pointer disabled:cursor-not-allowed disabled:data-[loading=true]:cursor-progress',
+    'focus-visible:border-primary-900 focus-visible:ring-1 focus-visible:ring-primary-900',
+    'active:ring-primary-900 enabled:active:ring-2 ',
   ],
   variants: {
     variant: {
       primary: [
-        'ct-border-primary-500 ct-bg-primary-500 ct-text-lightest hover:ct-bg-primary-500/90',
+        'border-primary-500 bg-primary-500 text-lightest hover:bg-primary-500/90',
       ],
       secondary: [
-        'ct-border-lightest ct-bg-lightest ct-text-primary-500 hover:ct-bg-dark-white/50',
+        'border-lightest bg-lightest text-primary-500 hover:bg-dark-white/50',
       ],
-      mono: 'ct-border-lightest ct-bg-lightest ct-text-stone-900 hover:ct-bg-dark-white/50',
+      mono: 'border-lightest bg-lightest text-stone-900 hover:bg-dark-white/50',
       cta: [
-        'ct-border-alert-500 ct-bg-alert-500 ct-text-lightest hover:ct-bg-alert-500/90',
+        'border-alert-500 bg-alert-500 text-lightest hover:bg-alert-500/90',
       ],
       destructive: [
-        'ct-border-error-500 ct-bg-error-500 ct-text-lightest hover:ct-bg-error-500/90',
+        'border-error-500 bg-error-500 text-lightest hover:bg-error-500/90',
       ],
     },
     size: {
-      sm: 'ct-gap-2 ct-p-2',
-      md: 'ct-gap-4 ct-px-5 ct-py-5',
-      lg: 'ct-gap-4 ct-p-6',
+      xs: ['gap-2 p-[0.438rem]', 'text-sm leading-none'],
+      sm: ['gap-2 px-10 py-[0.438rem]', 'text-base leading-[1.188rem]'],
+      md: ['gap-2 px-10 py-[0.938rem]', 'text-xl leading-[1.438rem]'],
+      lg: ['gap-4 px-10 py-[1.438rem]', 'text-2xl leading-7'],
     },
     rounded: {
-      full: 'ct-rounded-full',
-      '30': 'ct-rounded-[1.875rem]',
-      '20': 'ct-rounded-[1.25rem]',
+      full: 'rounded-full',
+      '30': 'rounded-[1.875rem]',
+      '20': 'rounded-[1.25rem]',
     },
   },
 
   defaultVariants: {
     variant: 'primary',
-    size: 'lg',
+    size: 'md',
     rounded: 'full',
   },
 })

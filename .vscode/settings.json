@@ -38,6 +38,6 @@
     "className",
     "ngClass",
     ".*ClassName"
-  ],
-  "jestrunner.runOptions": ["--coverage"]
+  ]
+  // "jestrunner.runOptions": ["--coverage"]
 }
