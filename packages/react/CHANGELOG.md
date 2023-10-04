@@ -1,5 +1,12 @@
 # @click-tools-ui/react
 
+## 0.3.2
+
+### Patch Changes
+
+- Remove tailwind prefix
+- Refactor typography
+
 ## 0.3.1
 
 ### Patch Changes
@@ -10,9 +17,9 @@
 
 ### Minor Changes
 
-- - Adding typografy base tv classes
-  - Adjusting default btn variant and its layout
-  - Adjust layout input
+- Adding typografy base tv classes
+- Adjusting default btn variant and its layout
+- Adjust layout input
 
 ## 0.2.3
 

@@ -1,12 +1,13 @@
-import React, {PropsWithChildren} from 'react';
-import {DocsContainer as BaseContainer, DocsContainerProps as BaseContainerProps} from '@storybook/blocks';
-import {themes} from '@storybook/theming';
-import {useDarkMode} from 'storybook-dark-mode';
+import React, { PropsWithChildren } from 'react'
+import {
+  DocsContainer as BaseContainer,
+  DocsContainerProps as BaseContainerProps,
+} from '@storybook/blocks'
+import { themes } from '@storybook/theming'
+import { useDarkMode } from 'storybook-dark-mode'
 
-export const DocsContainer = (
-  props: PropsWithChildren<BaseContainerProps>
-) => {
-  const dark = useDarkMode();
+export const DocsContainer = (props: PropsWithChildren<BaseContainerProps>) => {
+  const dark = useDarkMode()
   console.log('dd')
   return (
     <BaseContainer
@@ -15,5 +16,5 @@ export const DocsContainer = (
     >
       {props.children}
     </BaseContainer>
-  );
-};
+  )
+}

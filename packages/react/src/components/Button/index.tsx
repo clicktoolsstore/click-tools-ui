@@ -15,7 +15,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       type = 'button',
       variant = 'primary',
-      size = 'lg',
+      size = 'md',
       rounded = 'full',
       className,
       isLoading,

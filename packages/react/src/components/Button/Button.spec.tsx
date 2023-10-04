@@ -11,9 +11,12 @@ describe('Button Component', () => {
     expect(button).toHaveTextContent('Hello')
     expect(button.type).toBe('button')
     expect(button).toBeEnabled()
-    expect(button).toHaveClass(btnStyles({ variant: 'primary' }), {
-      exact: true,
-    })
+    expect(button).toHaveClass(
+      btnStyles({ variant: 'primary', size: 'md', rounded: 'full' }),
+      {
+        exact: true,
+      },
+    )
   })
 
   it('should be able to add new classNames', () => {
@@ -21,9 +24,12 @@ describe('Button Component', () => {
     render(<Button className={className}>Hello</Button>)
     const button = screen.getByRole('button') as HTMLButtonElement
 
-    expect(button).toHaveClass(btnStyles({ variant: 'primary', className }), {
-      exact: true,
-    })
+    expect(button).toHaveClass(
+      btnStyles({ variant: 'primary', size: 'md', rounded: 'full', className }),
+      {
+        exact: true,
+      },
+    )
     expect(button).toHaveClass(className)
   })
 })
