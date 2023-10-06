@@ -19,6 +19,7 @@
     "@click-tools-ui/eslint-config": "*",
     "@click-tools-ui/react": "*",
     "@click-tools-ui/tokens": "*",
+    "@storybook/addon-a11y": "^7.4.6",
     "@storybook/addon-backgrounds": "^7.4.5",
     "@storybook/addon-essentials": "^7.4.5",
     "@storybook/addon-interactions": "^7.4.5",
