@@ -8,7 +8,7 @@ const config = {
   ],
   theme: {
     extend: {
-      colors,
+      colors: { ...colors, 'sb-bg-dark': '#333333', 'sb-bg-light': '#f8f8f8' },
     },
   },
 

@@ -3,38 +3,45 @@ import { tv, VariantProps } from 'tailwind-variants'
 
 const inputStyle = tv({
   base: [
-    'flex w-full rounded-md border px-3 py-2',
-    'text-md text-primary-900',
     'bg-transparent shadow-sm transition-colors',
+    'flex w-full rounded-md border px-3 py-2',
+    'text-md',
     'file:border-0 file:bg-transparent file:text-sm file:font-medium',
-    'placeholder:text-neutral-500',
+
     'focus:transition-shadow focus-visible:outline-none',
     'focus-visible:ring-1',
     'disabled:cursor-not-allowed',
     'read-only:cursor-default',
+    'placeholder:text-sm',
   ],
   variants: {
-    error: {
-      true: 'border-error-500 focus-visible:ring-error-500',
-      false: 'border-primary-900 focus-visible:ring-primary-900',
+    variant: {
+      dark: [
+        'text-primary-900',
+        'border-primary-900 focus-visible:ring-primary-900',
+        'placeholder:text-primary-900/50',
+      ],
+      light: [
+        'text-lightest',
+        'border-dark-white focus-visible:ring-dark-white',
+        'placeholder:text-lightest/50',
+      ],
     },
   },
   defaultVariants: {
-    error: false,
+    variant: 'dark',
   },
 })
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement> &
-  Omit<VariantProps<typeof inputStyle>, 'error'> & {
-    error?: string
-  }
+  VariantProps<typeof inputStyle>
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, readOnly, error, type, ...props }, ref) => {
+  ({ variant, className, readOnly, type, ...props }, ref) => {
     return (
       <input
         type={type}
-        className={inputStyle({ error: !!error, className })}
+        className={inputStyle({ variant, className })}
         ref={ref}
         readOnly={readOnly}
         {...props}
