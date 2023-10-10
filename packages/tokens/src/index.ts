@@ -1,2 +1,3 @@
 export * from './tokens/colors'
-export * from './tokens/space'
+export * from './tokens/opacity'
+export * from './tokens/borderRadius'

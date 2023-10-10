@@ -21,7 +21,7 @@ const spaces = Object.entries(spacing)
   })
   .sort((a, b) => parseInt(a.valuePixel) - parseInt(b.valuePixel))
 
-export const SpaceTable = () => {
+export const SpacingTable = () => {
   return (
     <table>
       <thead>

@@ -4,5 +4,9 @@
     "@rocketseat/eslint-config/react",
     "plugin:storybook/recommended"
   ],
-  "ignorePatterns": ["!.storybook"]
+  "settings": {
+    "mdx/code-blocks": true,
+    "mdx/language-mapper": {}
+  },
+  "ignorePatterns": ["!.storybook", "!*.mdx"]
 }

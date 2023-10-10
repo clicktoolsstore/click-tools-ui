@@ -13,12 +13,10 @@ const meta: Meta<ComponentProps> = {
   },
   render: ({ variant, className, children, ...rest }) => {
     return (
-      <div className="p-4 bg-slate-50">
-        <h1 className={typography({ variant, className })} {...rest}>
-          {children ||
-            `${variant} - ${typographyInfo[variant as Keys].description}`}
-        </h1>
-      </div>
+      <h1 className={typography({ variant, className })} {...rest}>
+        {children ||
+          `${variant} - ${typographyInfo[variant as Keys].description}`}
+      </h1>
     )
   },
   argTypes: {
@@ -32,6 +30,13 @@ const meta: Meta<ComponentProps> = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div className="bg-sb-bg-light p-4">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export default meta

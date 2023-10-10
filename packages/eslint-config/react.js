@@ -3,7 +3,6 @@ module.exports = {
   extends: ['@rocketseat/eslint-config/react'],
   rules: {
     'no-console': 'warn',
-    'tailwindcss/no-custom-classname': 'off',
     'prettier/prettier': [
       'error',
       {
@@ -16,7 +15,7 @@ module.exports = {
         endOfLine: 'auto',
         plugins: ['prettier-plugin-tailwindcss'],
         tailwindAttributes: ['class', 'className', 'ngClass', '.*ClassName'],
-        tailwindFunctions: ['tv', 'twMerge'],
+        tailwindFunctions: ['tv', 'twMerge', 'cn'],
       },
     ],
   },
