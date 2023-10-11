@@ -10,10 +10,10 @@ export const OpacityBoxes = ({
   console.log('dd', className)
   return (
     <div className="relative w-fit">
-      <div className="w-12 h-12 bg-primary-500" />
+      <div className="h-12 w-12 bg-primary-500" />
       <div
         className={cn([
-          'w-12 h-12 bg-black absolute z-10 -top-[30%] -right-[30%]',
+          'absolute -right-[30%] -top-[30%] z-10 h-12 w-12 bg-black',
           className,
         ])}
       />
@@ -23,12 +23,12 @@ export const OpacityBoxes = ({
 
 export const OpacityList: FC = () => {
   return (
-    <div className="p-4 pt-8 bg-sb-bg-light rounded-md flex gap-4 flex-wrap">
+    <div className="flex flex-wrap gap-4 rounded-md bg-sb-bg-light p-4 pt-8">
       {Object.entries(opacity).map(([key]) => (
         <div key={key}>
           <OpacityBoxes className={[`opacity-` + key]} />
 
-          <span className="text-gray-900 font-bold text-sm mt-2">
+          <span className="mt-2 text-sm font-bold text-gray-900">
             Class: {'*'}
             opacity-{key}
           </span>
@@ -36,14 +36,14 @@ export const OpacityList: FC = () => {
       ))}
       <div>
         <div className="relative w-fit ">
-          <div className="w-12 h-12 bg-primary-500" />
+          <div className="h-12 w-12 bg-primary-500" />
           <div
-            className="w-12 h-12 bg-black absolute z-10 -top-[30%] -right-[30%]"
+            className="absolute -right-[30%] -top-[30%] z-10 h-12 w-12 bg-black"
             style={{ opacity: 0.8 }}
           />
         </div>
 
-        <span className="text-gray-900 font-bold text-sm mt-2">
+        <span className="mt-2 text-sm font-bold text-gray-900">
           Class: opacity-{80}
         </span>
       </div>

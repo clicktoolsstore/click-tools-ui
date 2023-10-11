@@ -3,12 +3,12 @@ import { getContrast } from 'polished'
 
 export function ColorsGrid() {
   return (
-    <div className="overflow-hidden sb-unstyled divide-y-2 divide-slate-600 border-2 border-slate-600 rounded-md shadow-md shadow-red-700 ">
+    <div className="sb-unstyled divide-y-2 divide-slate-600 overflow-hidden rounded-md border-2 border-slate-600 shadow shadow-primary-900 ">
       {Object.entries(colors).map(([key, color]) => {
         return (
           <div
             key={key}
-            className="p-8 sb-unstyled"
+            className="sb-unstyled p-8"
             style={{
               background: color,
             }}

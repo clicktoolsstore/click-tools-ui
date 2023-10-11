@@ -1,51 +1,42 @@
 import { Meta } from "@storybook/addon-docs";
 
-<Meta title={"Typography/typography/usage"} />
+<Meta title={"Typography/Usage"} />
 
-## Typography Styles Usage
+# Typography Usage
 
-To provide flexibility in styling elements, we export a style class builder as
+## Components
+
+The package <code>@click-tools-ui/react</code> provides several Typography components
+like <a href='/?path=/docs/typography-components-heading--docs'>Heading</a> and
+
+<a href="/?path=/docs/typography-components-text--docs">Text</a>. These
+components are polymorphic and come with default styles applied to them.
+
+### Basic usage:
 
 ```jsx
-typography({variant: <variantName>})
+<Text>Some Text</Text>
 ```
 
-The class can be utilized in your <code>html/components</code> to achieve consistent typography styles.
-
-## Basic Usage
-
-For basic usage, apply the typography styles directly to your elements:
+### Extending Styles:
 
 ```jsx
-import { typography } from "@click-tools-ui/react";
-...
-  // Apply typography styles using typography class in any html element
-  <h1 className={typography({ varaint: 'h1' })} {...rest}>
-    Sample
-  </h1>;
+<Text className="...classes">Some Text</Text>
 ```
 
-## Advanced Usage with Wrappers
+<em>
+  The styles will be applied on top of the defaults; check the components
+  sections for information on custom props.
+</em>
 
-If you need to apply additional custom classes or wrap the element:
+## Styles presets
+
+With this approach, you can apply the styles presets to any HTML element using
+presets built with [tailwind-variants](https://www.tailwind-variants.org/docs/introduction)
+.
 
 ```jsx
-import { FC, HTMLAttributes } from 'react'
-import { typography, TypographyProps } from "@click-tools-ui/react";
-
-type Props = HTMLAttributes<HTMLHeadingElement> & TypographyProps
-
-export const Wrapper: FC<Props> = ({
-  variant,
-  className,
-  children,
-  ...rest
-}) => {
-  return (
-    // typography({ variant, ['custom classes' , className] })
-    <h2 className={typography({ variant, className })} {...rest}>
-      {children}
-    </h2>
-  )
-}
+  import { textStyle } from '@click-tools-ui/react'
+  ...
+  <em className={textStyle()}>...</em>
 ```

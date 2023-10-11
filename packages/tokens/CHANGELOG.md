@@ -1,5 +1,11 @@
 # @click-tools-ui/tokens
 
+## 0.3.0
+
+### Minor Changes
+
+- creating custom tokens fontSize/lineHeight
+
 ## 0.2.0
 
 ### Minor Changes

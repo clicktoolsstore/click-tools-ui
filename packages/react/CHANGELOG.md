@@ -1,5 +1,12 @@
 # @click-tools-ui/react
 
+## 0.4.0
+
+### Minor Changes
+
+- Creating Typography components
+  Updating Button Components
+
 ## 0.3.3
 
 ### Patch Changes

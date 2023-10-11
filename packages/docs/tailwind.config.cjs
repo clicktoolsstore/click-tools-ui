@@ -1,4 +1,10 @@
-import { colors, opacity, borderRadius } from '@click-tools-ui/tokens'
+import {
+  colors,
+  borderRadius,
+  fontSize,
+  lineHeight,
+  opacity,
+} from '@click-tools-ui/tokens'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
@@ -9,15 +15,17 @@ const config = {
   ],
   theme: {
     extend: {
-      colors: { ...colors, 'sb-bg-dark': '#333333', 'sb-bg-light': '#f8f8f8' },
-      opacity,
       fontFamily: {
         sans: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans],
         roboto: ['var(--font-roboto)', 'sans-serif'],
         montserrat: ['var(--font-montserrat)', 'sans-serif'],
         mono: ['monospace', defaultTheme.fontFamily.mono],
       },
+      colors: { ...colors, 'sb-bg-dark': '#333333', 'sb-bg-light': '#f8f8f8' },
       borderRadius,
+      fontSize,
+      lineHeight,
+      opacity,
     },
   },
   plugins: [],

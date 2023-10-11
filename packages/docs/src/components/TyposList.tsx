@@ -3,7 +3,7 @@ import { typographyInfo } from '~/common/typographyInfo'
 
 export const TyposList = () => {
   return (
-    <div className="bg-slate-50 flex flex-col gap-4  p-4">
+    <div className="flex flex-col gap-4 bg-slate-50  p-4">
       {Object.entries(typographyInfo).map(([key, value]) => (
         <div key={key}>
           <p

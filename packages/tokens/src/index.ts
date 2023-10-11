@@ -1,3 +1,5 @@
 export * from './tokens/colors'
 export * from './tokens/opacity'
 export * from './tokens/borderRadius'
+export * from './tokens/fontSize'
+export * from './tokens/lineHeight'

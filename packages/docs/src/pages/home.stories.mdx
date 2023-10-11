@@ -3,3 +3,85 @@ import { Meta } from "@storybook/addon-docs";
 <Meta title="Home" />
 
 # Click Tools UI
+
+This design system is built upon the [Tailwind](https://tailwindcss.com)
+CSS framework and utilizes its class utilities and tokens.
+
+## Installation
+
+To use the components and tokens provided by this project, follow these steps:
+
+1- **Install Tailwind**: Refer to the official [Tailwind documentation](https://tailwindcss.com/docs/installation)
+for installation instructions.
+
+2- **Install Packages**:
+
+```bash
+npm install @click-tools-ui/react @click-tools-ui/tokens
+```
+
+3- **Import CSS**: Import the CSS file from the <code>@click-tools-ui/react/dist/index.css</code>
+after the <code>global.css</code> created on the first step.
+
+```js
+import "global.css";
+import "@click-tools-ui/react/dist/index.css";
+```
+
+<em className="text-slate-400 text-sm sb-unstyled">
+  This step brings the required CSS classes that the components need.
+</em>
+
+4- **Integrate Tokens**: Next integrate the tokens from <code>@click-tools-ui/tokens</code> with your
+
+<code>tailwind.config</code> as shown in the sample code below:
+
+```js
+import {
+  colors,
+  borderRadius,
+  fontSize,
+  lineHeight,
+  opacity,
+  ...
+} from '@click-tools-ui/tokens'
+import defaultTheme from 'tailwindcss/defaultTheme'
+
+/** @type {import('tailwindcss').Config} */
+const config = {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    'node_modules/@click-tools-ui/react/dist/index.css',
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans],
+        roboto: ['var(--font-roboto)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        mono: ['monospace', defaultTheme.fontFamily.mono],
+      },
+      colors: { ...colors, 'sb-bg-dark': '#333333', 'sb-bg-light': '#f8f8f8' },
+      borderRadius,
+      fontSize,
+      lineHeight,
+      opacity,
+    },
+    ...
+  },
+}
+
+export default config
+```
+
+<em className="text-slate-400 text-sm inline-flex  sb-unstyled">
+  For information on installing the required font-family and its weights, refer
+  to the &nbsp;
+  <a
+    href="/?path=/docs/tokens-font-families--docs"
+    className="text-blue-400 font-medium"
+  >
+    Font Families
+  </a>
+  &nbsp; section.
+</em>
