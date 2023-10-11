@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 0.4.1
+
+### Patch Changes
+
+- Remove ununsed pkg / remove typography preset
+
 ## 0.4.0
 
 ### Minor Changes
