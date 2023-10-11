@@ -1,0 +1,45 @@
+import { Meta } from "@storybook/addon-docs";
+import { OpacityList, OpacityBoxes } from "../../components/OpacityList";
+
+<Meta title={"Tokens/Opacity"} />
+
+# Opacity
+
+<OpacityList />
+Custom tokens marked with * require extending the tailwind
+<code>opacity</code> configuration.
+
+## Usage
+
+Here are some examples demonstrating how to use the opacity tokens with Tailwind CSS:
+
+<div className='p-4 pt-8 rounded-md bg-sb-bg-light'>
+  <OpacityBoxes className='opacity-64'/>
+
+```jsx
+<div className="opacity-64" /> //...
+// Adds the class with opacity:0.64 to the element
+```
+
+<OpacityBoxes className="bg-red-700/64" />
+
+```jsx
+<div className="bg-red-700/64" /> //...
+
+//  In this example, the Tailwind CSS class bg-red-700/64 applies a background
+//   color with the specified red shade and opacity. Under the hood, Tailwind
+//   transforms this class to background: rgb(185, 28, 28, 0.64);.
+```
+
+<span className="sb-unstyled font-bold text-red-700/64">
+  Some Text Semi transparent
+</span>
+
+```jsx
+<span className="sb-unstyled font-bold text-red-700/64" /> //...
+//  Similarly, you can apply the custom opacity tokens to various Tailwind CSS
+// color assignments like text, border, bg, shadow, and more to achieve
+//consistent transparency across your styles. Here's how you can continue to use these classes:
+```
+
+</div>

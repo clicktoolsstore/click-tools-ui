@@ -29,7 +29,7 @@ const meta: Meta<ButtonProps> = {
       options: ['xs', 'sm', 'md', 'lg'],
       table: {
         defaultValue: {
-          summary: 'lg',
+          summary: 'md',
         },
       },
     },
@@ -37,7 +37,7 @@ const meta: Meta<ButtonProps> = {
 
   render: (args) => {
     return (
-      <div className="p-5 bg-slate-100">
+      <div className="bg-slate-100 p-5">
         <Button {...args} />
       </div>
     )

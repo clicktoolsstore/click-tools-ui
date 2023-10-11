@@ -1,6 +1,6 @@
 {
   "name": "@click-tools-ui/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "license": "MIT",
   "files": [
@@ -8,6 +8,7 @@
     "./react.js"
   ],
   "devDependencies": {
-    "@rocketseat/eslint-config": "^2.1.0"
+    "@rocketseat/eslint-config": "^2.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.5"
   }
 }

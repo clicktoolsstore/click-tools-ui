@@ -1,5 +1,11 @@
 # @click-tools-ui/eslint-config
 
+## 1.0.3
+
+### Patch Changes
+
+- Removing prettier config extension
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,0 +1,42 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title={"Typography/Usage"} />
+
+# Typography Usage
+
+## Components
+
+The package <code>@click-tools-ui/react</code> provides several Typography components
+like <a href='/?path=/docs/typography-components-heading--docs'>Heading</a> and
+
+<a href="/?path=/docs/typography-components-text--docs">Text</a>. These
+components are polymorphic and come with default styles applied to them.
+
+### Basic usage:
+
+```jsx
+<Text>Some Text</Text>
+```
+
+### Extending Styles:
+
+```jsx
+<Text className="...classes">Some Text</Text>
+```
+
+<em>
+  The styles will be applied on top of the defaults; check the components
+  sections for information on custom props.
+</em>
+
+## Styles presets
+
+With this approach, you can apply the styles presets to any HTML element using
+presets built with [tailwind-variants](https://www.tailwind-variants.org/docs/introduction)
+.
+
+```jsx
+  import { textStyle } from '@click-tools-ui/react'
+  ...
+  <em className={textStyle()}>...</em>
+```

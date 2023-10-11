@@ -1,5 +1,17 @@
 # @click-tools-ui/tokens
 
+## 0.3.0
+
+### Minor Changes
+
+- creating custom tokens fontSize/lineHeight
+
+## 0.2.0
+
+### Minor Changes
+
+- Adding tokens opacity and borderRadius
+
 ## 0.1.3
 
 ### Patch Changes
