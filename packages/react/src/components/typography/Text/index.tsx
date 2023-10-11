@@ -21,7 +21,11 @@ export const textStyle = tv({
   variants: {
     size: { xs: 'text-xs', md: 'text-base', '2xl': 'text-2xl' },
     leading: { '1.3': 'leading-1.3', '1.6': 'leading-1.6' },
-    weight: { regular: 'font-normal', bold: 'font-bold' },
+    weight: {
+      regular: 'font-normal',
+      medium: 'font-medium',
+      bold: 'font-bold',
+    },
   },
   defaultVariants: {
     size: 'md',
@@ -40,8 +44,8 @@ export const Text = forwardRef<TextElement, TextProps>(
       children,
       className,
       size = 'md',
-      weight = 'bold',
       leading = '1.3',
+      weight = 'regular',
       as: Tag = 'span',
       ...rest
     } = props
