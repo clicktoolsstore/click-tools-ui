@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading Component should render correctly "size" variants: size-2xl 1`] = `"font-montserrat text-primary-900 text-2xl leading-1.3 font-bold"`;
+
+exports[`Heading Component should render correctly "size" variants: size-3.5xl 1`] = `"font-montserrat text-primary-900 text-3.5xl leading-1.3 font-bold"`;
+
+exports[`Heading Component should render correctly "size" variants: size-5xl 1`] = `"font-montserrat text-primary-900 text-5xl leading-1.3 font-bold"`;
+
+exports[`Heading Component should render correctly "size" variants: size-7xl 1`] = `"font-montserrat text-primary-900 text-7xl leading-1.3 font-bold"`;
+
+exports[`Heading Component should render correctly "weight" variants: weight-black 1`] = `"font-montserrat text-primary-900 text-2xl leading-1.3 font-black"`;
+
+exports[`Heading Component should render correctly "weight" variants: weight-bold 1`] = `"font-montserrat text-primary-900 text-2xl leading-1.3 font-bold"`;

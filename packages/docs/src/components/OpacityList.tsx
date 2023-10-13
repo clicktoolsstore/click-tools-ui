@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { opacity } from '@click-tools-ui/tokens'
 import { cn } from '@click-tools-ui/react'
+import { labelSBStyle } from './ui/typography'
 
 export const OpacityBoxes = ({
   className,
@@ -28,14 +29,15 @@ export const OpacityList: FC = () => {
         <div key={key}>
           <OpacityBoxes className={[`opacity-` + key]} />
 
-          <span className="mt-2 text-sm font-bold text-gray-900">
-            Class: {'*'}
+          <span className={labelSBStyle()}>
+            class: {'*'}
             opacity-{key}
           </span>
         </div>
       ))}
+
       <div>
-        <div className="relative w-fit ">
+        <div className="relative w-fit">
           <div className="h-12 w-12 bg-primary-500" />
           <div
             className="absolute -right-[30%] -top-[30%] z-10 h-12 w-12 bg-black"
@@ -43,9 +45,7 @@ export const OpacityList: FC = () => {
           />
         </div>
 
-        <span className="mt-2 text-sm font-bold text-gray-900">
-          Class: opacity-{80}
-        </span>
+        <span className={labelSBStyle()}>Class: opacity-{80}</span>
       </div>
     </div>
   )

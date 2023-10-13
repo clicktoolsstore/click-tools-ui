@@ -1,5 +1,11 @@
 # @click-tools-ui/tokens
 
+## 0.4.0
+
+### Minor Changes
+
+- adding tokens box-shadow/drop-shadow
+
 ## 0.3.0
 
 ### Minor Changes
