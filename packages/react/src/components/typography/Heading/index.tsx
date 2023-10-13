@@ -9,7 +9,7 @@ type HeadingAsProps = {
 
 /** Default Heading tailwind-variant style */
 export const headingStyle = tv({
-  base: 'font-montserrat  text-primary-900',
+  base: 'font-montserrat  text-neutral-900',
   variants: {
     size: {
       '2xl': 'text-2xl leading-1.3',

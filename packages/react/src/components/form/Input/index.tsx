@@ -7,7 +7,6 @@ const inputStyle = tv({
     'flex w-full rounded-md border px-3 py-2',
     'text-md',
     'file:border-0 file:bg-transparent file:text-sm file:font-medium',
-
     'focus:transition-shadow focus-visible:outline-none',
     'focus-visible:ring-1',
     'disabled:cursor-not-allowed',
@@ -17,14 +16,14 @@ const inputStyle = tv({
   variants: {
     variant: {
       dark: [
-        'text-primary-900',
-        'border-primary-900 focus-visible:ring-primary-900',
-        'placeholder:text-primary-900/50',
+        'text-neutral-900',
+        'border-neutral-900 focus-visible:ring-neutral-900',
+        'placeholder:text-neutral-900/50',
       ],
       light: [
-        'text-lightest',
+        'text-white',
         'border-dark-white focus-visible:ring-dark-white',
-        'placeholder:text-lightest/50',
+        'placeholder:text-white/50',
       ],
     },
   },

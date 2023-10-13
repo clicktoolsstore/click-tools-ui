@@ -1,9 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Button, ButtonProps } from '@click-tools-ui/react'
 
+const variantOptions: ButtonProps['variant'][] = [
+  'primary',
+  'primary-inverse',
+  'secondary',
+  'secondary-inverse',
+  'cta',
+  'destructive',
+]
+const sizeOptions: ButtonProps['size'][] = ['sm', 'md', 'lg']
 const meta: Meta<ButtonProps> = {
   title: 'Components/Buttons/Button',
   tags: ['autodocs'],
+  component: Button,
   args: {
     variant: 'primary',
     children: 'Button Label',
@@ -17,7 +27,7 @@ const meta: Meta<ButtonProps> = {
     },
     variant: {
       control: 'inline-radio',
-      options: ['primary', 'secondary', 'mono', 'cta', 'destructive'],
+      options: variantOptions,
       table: {
         defaultValue: {
           summary: 'primary',
@@ -26,7 +36,7 @@ const meta: Meta<ButtonProps> = {
     },
     size: {
       control: 'inline-radio',
-      options: ['xs', 'sm', 'md', 'lg'],
+      options: sizeOptions,
       table: {
         defaultValue: {
           summary: 'md',
@@ -34,10 +44,9 @@ const meta: Meta<ButtonProps> = {
       },
     },
   },
-
   render: (args) => {
     return (
-      <div className="bg-slate-100 p-5">
+      <div className="bg-neutral-400 p-5">
         <Button {...args} />
       </div>
     )
@@ -50,6 +59,13 @@ type Story = StoryObj<ButtonProps>
 
 export const Primary: Story = {}
 
+export const PrimaryInverse: Story = {
+  args: {
+    variant: 'primary-inverse',
+    children: 'Primary Inverse',
+  },
+}
+
 export const Secondary: Story = {
   args: {
     variant: 'secondary',
@@ -57,10 +73,10 @@ export const Secondary: Story = {
   },
 }
 
-export const Mono: Story = {
+export const SecondaryInverse: Story = {
   args: {
-    variant: 'mono',
-    children: 'Mono',
+    variant: 'secondary-inverse',
+    children: 'Secondary Inverse',
   },
 }
 

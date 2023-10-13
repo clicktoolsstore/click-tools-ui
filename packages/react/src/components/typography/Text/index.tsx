@@ -17,7 +17,7 @@ type TextPProps = { as: 'p' } & ComponentPropsWithoutRef<'p'>
 
 /** Default Heading tailwind-variant style */
 export const textStyle = tv({
-  base: 'font-roboto text-primary-900',
+  base: 'font-roboto text-neutral-900',
   variants: {
     size: { xs: 'text-xs', md: 'text-base', '2xl': 'text-2xl' },
     leading: { '1.3': 'leading-1.3', '1.6': 'leading-1.6' },

@@ -13,7 +13,7 @@ describe('Text Component', () => {
     expect(element.tagName).toBe('SPAN')
 
     expect(element).toHaveClass(
-      'font-roboto text-primary-900 text-base leading-1.3 font-normal',
+      'font-roboto text-neutral-900 text-base leading-1.3 font-normal',
       { exact: true },
     )
   })
