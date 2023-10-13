@@ -12,7 +12,7 @@ describe('Heading Component', () => {
     // check defaults
     expect(element.tagName).toBe('H2')
     expect(element).toHaveClass(
-      'font-montserrat text-primary-900 text-2xl leading-1.3 font-bold',
+      'font-montserrat text-neutral-900 text-2xl leading-1.3 font-bold',
       { exact: true },
     )
   })

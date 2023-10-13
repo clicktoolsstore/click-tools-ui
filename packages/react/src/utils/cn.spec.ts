@@ -2,19 +2,19 @@ import { cn } from './cn'
 
 describe('cn utility', () => {
   it('should merge the classNames correctly', () => {
-    const result = cn('bg-darkest', 'text-lightest', [
+    const result = cn('bg-black', 'text-white', [
       'border',
       'border-primary-500',
     ])
-    expect(result).toEqual('bg-darkest text-lightest border border-primary-500')
+    expect(result).toEqual('bg-black text-white border border-primary-500')
 
-    const result2 = cn('bg-darkest', 'text-lightest')
-    expect(result2).toEqual('bg-darkest text-lightest')
+    const result2 = cn('bg-black', 'text-white')
+    expect(result2).toEqual('bg-black text-white')
   })
 
   it('should merge and keep the last classNames correctly', () => {
-    const result = cn('bg-darkest text-lightest border-2', 'border')
-    expect(result).toEqual('bg-darkest text-lightest border')
+    const result = cn('border-2 bg-black text-white', 'border')
+    expect(result).toEqual('bg-black text-white border')
   })
 
   it('should merge based on the conditions', () => {
