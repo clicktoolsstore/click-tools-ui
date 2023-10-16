@@ -1,5 +1,11 @@
 # @click-tools-ui/tokens
 
+## 0.5.0
+
+### Minor Changes
+
+- update colors pallet
+
 ## 0.4.0
 
 ### Minor Changes
