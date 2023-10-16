@@ -1,5 +1,12 @@
 # @click-tools-ui/react
 
+## 0.4.4
+
+### Patch Changes
+
+- 6fa8e18: Update pallet and buttons effects
+- Adding Button 32 variant
+
 ## 0.4.3
 
 ### Patch Changes

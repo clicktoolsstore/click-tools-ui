@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Button, ButtonProps } from '@click-tools-ui/react'
+import { Button, ButtonProps, cn } from '@click-tools-ui/react'
+import TimesIcon from '~/assets/times.svg?react'
 
 const variantOptions: ButtonProps['variant'][] = [
   'primary',
@@ -9,7 +10,7 @@ const variantOptions: ButtonProps['variant'][] = [
   'cta',
   'destructive',
 ]
-const sizeOptions: ButtonProps['size'][] = ['sm', 'md', 'lg']
+const sizeOptions: ButtonProps['size'][] = ['32', 'sm', 'md', 'lg']
 const meta: Meta<ButtonProps> = {
   title: 'Components/Buttons/Button',
   tags: ['autodocs'],
@@ -44,10 +45,17 @@ const meta: Meta<ButtonProps> = {
       },
     },
   },
-  render: (args) => {
+  render: ({ size, variant, children, ...rest }) => {
     return (
-      <div className="bg-neutral-400 p-5">
-        <Button {...args} />
+      <div
+        className={cn(
+          'flex flex-col p-4',
+          variant?.includes('inverse') && 'bg-sb-bg-dark',
+        )}
+      >
+        <Button size={size} variant={variant} {...rest}>
+          {size === '32' ? <TimesIcon color="inherit" /> : children}
+        </Button>
       </div>
     )
   },

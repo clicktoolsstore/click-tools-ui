@@ -31,7 +31,8 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "tailwindCSS.experimental.classRegex": [
     ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["(?:twMerge|twJoin|cn)\\(([^\\);]*)[\\);]", "[`'\"`]([^'\"`,;]*)[`'\"`]"]
+    "(?:twMerge|twJoin|cn)\\(([^\\);]*)[\\);]",
+    "[`'\"`]([^'\"`,;]*)[`'\"`]"
   ],
   "tailwindCSS.classAttributes": [
     "class",
