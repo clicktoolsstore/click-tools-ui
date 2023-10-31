@@ -7,6 +7,7 @@ const variantOptions: ButtonProps['variant'][] = [
   'primary-inverse',
   'secondary',
   'secondary-inverse',
+  'mono',
   'cta',
   'destructive',
 ]
@@ -50,7 +51,8 @@ const meta: Meta<ButtonProps> = {
       <div
         className={cn(
           'flex flex-col p-4',
-          variant?.includes('inverse') && 'bg-sb-bg-dark',
+          // variant?.includes('inverse') && 'bg-sb-bg-dark',
+          variant?.includes('mono') && 'bg-sb-bg-light',
         )}
       >
         <Button size={size} variant={variant} {...rest}>
@@ -85,6 +87,13 @@ export const SecondaryInverse: Story = {
   args: {
     variant: 'secondary-inverse',
     children: 'Secondary Inverse',
+  },
+}
+
+export const Mono: Story = {
+  args: {
+    variant: 'mono',
+    children: 'Mono',
   },
 }
 
