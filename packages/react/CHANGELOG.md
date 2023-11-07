@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 0.5.2
+
+### Patch Changes
+
+- Increment Heading size
+
 ## 0.5.1
 
 ### Patch Changes

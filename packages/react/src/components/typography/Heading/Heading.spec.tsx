@@ -20,6 +20,7 @@ describe('Heading Component', () => {
     const sizes: Record<HeadingProps['size'], any> = {
       lg: '',
       '2xl': '',
+      '2.5xl': '',
       '3.5xl': '',
       '5xl': '',
       '7xl': '',

@@ -14,6 +14,7 @@ export const headingStyle = tv({
     size: {
       lg: 'text-lg leading-1.3',
       '2xl': 'text-2xl leading-1.3',
+      '2.5xl': 'text-[1.75rem] leading-1.3',
       '3.5xl': 'text-3.5xl leading-1.3',
       '5xl': 'text-5xl leading-1.3',
       '7xl': 'text-7xl leading-1.3',

@@ -1,7 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Heading, HeadingProps } from '@click-tools-ui/react'
 
-const sizeOptions: HeadingProps['size'][] = ['lg', '2xl', '3.5xl', '5xl', '7xl']
+const sizeOptions: HeadingProps['size'][] = [
+  'lg',
+  '2xl',
+  '2.5xl',
+  '3.5xl',
+  '5xl',
+  '7xl',
+]
 const weightOptions: HeadingProps['weight'][] = ['semi-bold', 'bold', 'black']
 const tagOptions: HeadingProps['as'][] = [
   'h1',
