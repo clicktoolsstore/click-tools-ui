@@ -18,6 +18,7 @@ describe('Heading Component', () => {
   })
   it('should render correctly "size" variants', () => {
     const sizes: Record<HeadingProps['size'], any> = {
+      lg: '',
       '2xl': '',
       '3.5xl': '',
       '5xl': '',
@@ -47,6 +48,7 @@ describe('Heading Component', () => {
     const weights: Record<HeadingProps['weight'], any> = {
       bold: '',
       black: '',
+      'semi-bold': '',
     }
     const text = 'heading-'
 
@@ -76,6 +78,7 @@ describe('Heading Component', () => {
       h4: '',
       h5: '',
       h6: '',
+      strong: '',
     }
     const text = 'text-'
 
