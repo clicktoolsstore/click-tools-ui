@@ -1,7 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Heading, HeadingProps } from '@click-tools-ui/react'
 
-const sizeOptions: HeadingProps['size'][] = ['2xl', '3.5xl', '5xl', '7xl']
+const sizeOptions: HeadingProps['size'][] = ['lg', '2xl', '3.5xl', '5xl', '7xl']
+const weightOptions: HeadingProps['weight'][] = ['semi-bold', 'bold', 'black']
+const tagOptions: HeadingProps['as'][] = [
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'strong',
+]
 
 /** This component uses the `headingStyle` preset. */
 const meta: Meta<HeadingProps> = {
@@ -25,16 +35,16 @@ const meta: Meta<HeadingProps> = {
     },
     weight: {
       control: 'inline-radio',
-      options: ['bold', 'black'] as HeadingProps['weight'][],
+      options: weightOptions,
       table: {
         defaultValue: {
-          summary: 'md',
+          summary: 'bold',
         },
       },
     },
     as: {
       control: 'inline-radio',
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as HeadingProps['as'][],
+      options: tagOptions,
       table: {
         defaultValue: {
           summary: 'h2',

@@ -8,6 +8,10 @@ exports[`Heading Component should render correctly "size" variants: size-5xl 1`]
 
 exports[`Heading Component should render correctly "size" variants: size-7xl 1`] = `"font-montserrat text-neutral-900 text-7xl leading-1.3 font-bold"`;
 
+exports[`Heading Component should render correctly "size" variants: size-lg 1`] = `"font-montserrat text-neutral-900 text-lg leading-1.3 font-bold"`;
+
 exports[`Heading Component should render correctly "weight" variants: weight-black 1`] = `"font-montserrat text-neutral-900 text-2xl leading-1.3 font-black"`;
 
 exports[`Heading Component should render correctly "weight" variants: weight-bold 1`] = `"font-montserrat text-neutral-900 text-2xl leading-1.3 font-bold"`;
+
+exports[`Heading Component should render correctly "weight" variants: weight-semi-bold 1`] = `"font-montserrat text-neutral-900 text-2xl leading-1.3 font-semibold"`;
