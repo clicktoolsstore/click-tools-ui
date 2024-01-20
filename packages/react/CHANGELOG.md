@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 0.6.0
+
+### Minor Changes
+
+- Update Input Variants
+
 ## 0.5.2
 
 ### Patch Changes
