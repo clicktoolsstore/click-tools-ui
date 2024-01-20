@@ -1,6 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { InputProps, Input, cn } from '@click-tools-ui/react'
 
+const options: InputProps['variant'][] = [
+  'primary-outline',
+  'primary-solid',
+  'dark-outline',
+  'dark-solid',
+  'light-solid',
+]
+
+const lightLayout: InputProps['variant'][] = ['dark-solid', 'dark-outline']
 const meta: Meta<InputProps> = {
   title: 'Components/Inputs/Input',
   component: Input,
@@ -9,13 +18,13 @@ const meta: Meta<InputProps> = {
     disabled: false,
     placeholder: 'Placeholder',
     readOnly: false,
-    variant: 'dark',
+    variant: 'dark-outline',
     defaultValue: '',
   },
   argTypes: {
     variant: {
       control: 'inline-radio',
-      options: ['light', 'dark'],
+      options,
       description: 'Color schema',
       table: {
         defaultValue: {
@@ -29,7 +38,7 @@ const meta: Meta<InputProps> = {
       <div
         className={cn(
           'p-5',
-          args.variant === 'light' ? 'bg-sb-bg-dark' : 'bg-sb-bg-light',
+          lightLayout.includes(args.variant) ? 'bg-slate-300' : 'bg-sb-bg-dark',
         )}
       >
         <Input {...args} />
@@ -42,10 +51,32 @@ export default meta
 
 type Story = StoryObj<InputProps>
 
-export const Dark: Story = {}
-
-export const Light: Story = {
+export const LightSolid: Story = {
   args: {
-    variant: 'light',
+    variant: 'light-solid',
+  },
+}
+
+export const DarkSolid: Story = {
+  args: {
+    variant: 'dark-solid',
+  },
+}
+
+export const DarkOutline: Story = {
+  args: {
+    variant: 'dark-outline',
+  },
+}
+
+export const PrimarySolid: Story = {
+  args: {
+    variant: 'primary-solid',
+  },
+}
+
+export const PrimaryOutline: Story = {
+  args: {
+    variant: 'primary-outline',
   },
 }
