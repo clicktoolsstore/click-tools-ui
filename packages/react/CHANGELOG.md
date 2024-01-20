@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 0.6.1
+
+### Patch Changes
+
+- Fix input light-solid bg
+
 ## 0.6.0
 
 ### Minor Changes

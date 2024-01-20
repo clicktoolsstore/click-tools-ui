@@ -16,9 +16,9 @@ const inputStyle = tv({
   variants: {
     variant: {
       'light-solid': [
-        'text-white',
-        'border-neutral-300 focus-visible:ring-neutral-200',
-        'placeholder:text-white/50',
+        'bg-white text-neutral-900',
+        'border-neutral-300 focus-visible:ring-neutral-300',
+        'placeholder:text-neutral-900/50',
       ],
       'dark-solid': [
         'bg-neutral-900 text-white',
