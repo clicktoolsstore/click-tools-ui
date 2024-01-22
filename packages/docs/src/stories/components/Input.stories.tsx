@@ -2,14 +2,24 @@ import { Meta, StoryObj } from '@storybook/react'
 import { InputProps, Input, cn } from '@click-tools-ui/react'
 
 const options: InputProps['variant'][] = [
-  'primary-outline',
-  'primary-solid',
   'dark-outline',
-  'dark-solid',
+  // 'dark-white-solid',
+  // 'dark-solid',
+  'primary-outline',
+  // 'primary-solid',
+  'light-outline',
   'light-solid',
 ]
-
-const lightLayout: InputProps['variant'][] = ['dark-solid', 'dark-outline']
+type Variants = Exclude<InputProps['variant'], undefined>
+const bgContrast: Record<Variants, { className: string }> = {
+  'dark-outline': { className: 'bg-dark-white' },
+  // 'dark-white-solid': { className: 'bg-off-white' },
+  // 'dark-solid': { className: 'bg-dark-white' },
+  'primary-outline': { className: 'bg-dark-white' },
+  // 'primary-solid': { className: 'bg-dark-white' },
+  'light-outline': { className: 'bg-primary-500' },
+  'light-solid': { className: 'bg-primary-600' },
+}
 const meta: Meta<InputProps> = {
   title: 'Components/Inputs/Input',
   component: Input,
@@ -28,7 +38,7 @@ const meta: Meta<InputProps> = {
       description: 'Color schema',
       table: {
         defaultValue: {
-          summary: 'dark',
+          summary: 'dark-outline',
         },
       },
     },
@@ -38,7 +48,7 @@ const meta: Meta<InputProps> = {
       <div
         className={cn(
           'p-5',
-          lightLayout.includes(args.variant) ? 'bg-slate-300' : 'bg-sb-bg-dark',
+          bgContrast[args.variant || 'dark-outline'].className,
         )}
       >
         <Input {...args} />
@@ -51,32 +61,44 @@ export default meta
 
 type Story = StoryObj<InputProps>
 
-export const LightSolid: Story = {
-  args: {
-    variant: 'light-solid',
-  },
-}
-
-export const DarkSolid: Story = {
-  args: {
-    variant: 'dark-solid',
-  },
-}
-
 export const DarkOutline: Story = {
   args: {
     variant: 'dark-outline',
   },
 }
 
-export const PrimarySolid: Story = {
-  args: {
-    variant: 'primary-solid',
-  },
-}
+// export const DarkWhiteSolid: Story = {
+//   args: {
+//     variant: 'dark-white-solid',
+//   },
+// }
+
+// export const DarkSolid: Story = {
+//   args: {
+//     variant: 'dark-solid',
+//   },
+// }
 
 export const PrimaryOutline: Story = {
   args: {
     variant: 'primary-outline',
+  },
+}
+
+// export const PrimarySolid: Story = {
+//   args: {
+//     variant: 'primary-solid',
+//   },
+// }
+
+export const LightSolid: Story = {
+  args: {
+    variant: 'light-solid',
+  },
+}
+
+export const LightOutline: Story = {
+  args: {
+    variant: 'light-outline',
   },
 }

@@ -15,30 +15,30 @@ const inputStyle = tv({
   ],
   variants: {
     variant: {
-      'light-solid': [
-        'bg-white text-neutral-900',
-        'border-neutral-300 focus-visible:ring-neutral-300',
-        'placeholder:text-neutral-900/50',
-      ],
-      'dark-solid': [
-        'bg-neutral-900 text-white',
-        'border-neutral-900 focus-visible:ring-white',
-        'placeholder:text-white/50',
-      ],
       'dark-outline': [
         'text-neutral-900',
         'border-neutral-900 focus-visible:ring-neutral-900',
         'placeholder:text-neutral-900/50',
       ],
-      'primary-solid': [
-        'bg-primary-500 text-white',
-        'border-primary-500 focus:border-white  focus-visible:ring-white',
-        'placeholder:text-white/50',
-      ],
+      // 'dark-white-solid': [
+      //   'bg-dark-white text-neutral-900',
+      //   'border-white focus:border-neutral-900 focus-visible:ring-neutral-900',
+      //   'placeholder:text-neutral-900/50',
+      // ],
       'primary-outline': [
         'text-primary-500',
         'border-primary-500  focus-visible:ring-primary-500',
         'placeholder:text-neutral-900/50',
+      ],
+      'light-solid': [
+        'bg-white text-neutral-900',
+        'border-neutral-300 focus-visible:ring-neutral-300',
+        'placeholder:text-neutral-900/50',
+      ],
+      'light-outline': [
+        'text-white',
+        'border-white focus-visible:ring-white',
+        'placeholder:text-neutral-300/90',
       ],
     },
   },

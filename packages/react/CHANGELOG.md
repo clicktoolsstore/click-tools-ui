@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 0.7.0
+
+### Minor Changes
+
+- Remove unecessary input variants, add input dark-white
+
 ## 0.6.1
 
 ### Patch Changes
