@@ -1,5 +1,11 @@
 # @click-tools-ui/react
 
+## 1.0.0
+
+### Major Changes
+
+- Creation of Textarea
+
 ## 0.7.0
 
 ### Minor Changes
